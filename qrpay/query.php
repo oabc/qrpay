@@ -33,6 +33,10 @@ if (!empty($_GET['id'])&& trim($_GET['id'])!=""){
             die(json_encode($queryResult->getResponse()));
             print_r($queryResult->getResponse());
             break;
+        case "FAILED":
+            die('FAILED');
+            print_r($queryResult->getResponse());
+            break;
         default:
             die();
             break;
