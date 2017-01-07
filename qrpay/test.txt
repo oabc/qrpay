@@ -1,0 +1,31 @@
+QAVGSAFqcM7GWM4YnYCY
+一开始
+stdClass Object ( 
+[code] => 40004 
+[msg] => Business Failed 
+[sub_code] => ACQ.TRADE_NOT_EXIST 
+[sub_msg] => 交易不存在 
+[buyer_pay_amount] => 0.00 
+[invoice_amount] => 0.00 
+[out_trade_no] => QAVGSAFqcM7GWM4YnYCY 
+[point_amount] => 0.00 
+[receipt_amount] => 0.00 )
+扫描
+stdClass Object ( 
+[code] => 10000 
+[msg] => Success 
+[buyer_logon_id] => wdt***@163.com 
+[buyer_pay_amount] => 0.00 
+[buyer_user_id] => 2088702573537184 
+[invoice_amount] => 0.00 
+[open_id] => 20880047675498883886866611814218 
+[out_trade_no] => QAVGSAFqcM7GWM4YnYCY 
+[point_amount] => 0.00 
+[receipt_amount] => 0.00 
+[total_amount] => 0.10 
+[trade_no] => 2017010721001004180268741176 
+[trade_status] => WAIT_BUYER_PAY ) FAILED
+
+
+
+666666

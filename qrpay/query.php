@@ -28,19 +28,27 @@ if (!empty($_GET['id'])&& trim($_GET['id'])!=""){
     $queryResult = $queryResponse->queryTradeResult($queryContentBuilder);
 
     //根据查询返回结果状态进行业务处理
+    $result['msg']='ERROR';
+    $result['code']='0';
     switch ($queryResult->getTradeStatus()){
         case "SUCCESS":
-            die(json_encode($queryResult->getResponse()));
-            print_r($queryResult->getResponse());
+            $r=$queryResult->getResponse()
+            $result['msg']='SUCCESS';
+            $result['no']=$r->out_trade_no;
+            $result['code']='2';}
+            $result['price']=$r->receipt_amount;
+            $result['monney']=$r->invoice_amount;
             break;
         case "FAILED":
-            die('FAILED');
-            print_r($queryResult->getResponse());
+            if($queryResult->getResponse()->code=='40004'){$result['msg']='INVALID';$result['code']='0';}
+            elseif($queryResult->getResponse()->trade_status=='WAIT_BUYER_PAY'){$result['msg']='WAIT';$result['code']='1';}
+            elseif($queryResult->getResponse()->trade_status=='TRADE_CLOSED'){$result['msg']='CLOSED';$result['code']='3';}
             break;
         default:
-            die();
             break;
     }
+    $result['ok']='1';
+    die(json_encode($result));
     return ;
 }
 
