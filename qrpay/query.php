@@ -30,12 +30,12 @@ if (!empty($_GET['id'])&& trim($_GET['id'])!=""){
     //根据查询返回结果状态进行业务处理
     $result['msg']='ERROR';
     $result['code']='0';
+    $result['no']=$out_trade_no;
     switch ($queryResult->getTradeStatus()){
         case "SUCCESS":
-            $r=$queryResult->getResponse()
+            $r=$queryResult->getResponse();
             $result['msg']='SUCCESS';
-            $result['no']=$r->out_trade_no;
-            $result['code']='2';}
+            $result['code']='2';
             $result['price']=$r->receipt_amount;
             $result['monney']=$r->invoice_amount;
             break;

@@ -16,7 +16,7 @@ $config = array (
 		'app_id' => "2016120103673072",
 
 		//异步通知地址,只有扫码支付预下单可用
-		'notify_url' => "http://p.peernat.com/alipay/index.php",
+		'notify_url' => "",
 
 		//最大查询重试次数
 		'MaxQueryRetry' => "10",

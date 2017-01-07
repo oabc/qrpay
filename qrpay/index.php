@@ -47,8 +47,8 @@ if (!empty($_GET['id'])&& trim($_GET['id'])!=""&&!empty($_GET['price'])&& trim($
 	//$extendParams->setSysServiceProviderId($providerId);
 	//$extendParamsArr = $extendParams->getExtendParams();
 
-	// 支付超时，线下扫码交易定义为15分钟
-	$timeExpress = "15m";
+	// 支付超时，线下扫码交易定义为5分钟
+	$timeExpress = "5m";
 	$providerId = "2088702573537184";
 	// 商品明细列表，需填写购买商品详细信息，
 	$goodsDetailList = array();
