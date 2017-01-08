@@ -12,7 +12,6 @@ $config = array (
 		//支付宝网关
 		'gatewayUrl' => "https://openapi.alipay.com/gateway.do",
 
-		//应用ID  2016120103673072 test 2016120103669417
 		'app_id' => "2016120103673072",
 
 		//异步通知地址,只有扫码支付预下单可用
