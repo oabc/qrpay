@@ -5,7 +5,7 @@
  * Date: 16/5/19
  * Time: 下午2:09
  */
-require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'./../../AopSdk.php';
+require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'../AopSdk.php';
 require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'./../model/result/AlipayF2FPayResult.php';
 require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'../model/result/AlipayF2FQueryResult.php';
 require_once dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'../model/result/AlipayF2FRefundResult.php';
