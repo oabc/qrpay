@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index - 我的 ASP.NET 应用程序</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/site.css" rel="stylesheet" />
+    <link href="/Content/easyui.css" rel="stylesheet" />
+    <link href="/Content/icon.css" rel="stylesheet" />
+    <link href="/Content/color.css" rel="stylesheet" />
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+
+    <style type="text/css">
+        .navbar-collapse {
+            max-height: 540px;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", verdana, helvetica, arial, sans-serif;
+            padding: 50px;
+            font-size: 12px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/Home">融资外呼系统</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">我的客户</a></li>
+                </ul>
+                <form action="/Account/LogOff?returnUrl=%2F" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="iLHeF4rSteVlhKWkA-5lHgTRxE8xkd3LPTGjHLcN6-SU_pWcbVaJPlNMKqPwKLb97nvr0IgHYD5fe2tvBKgEgDAKVYp1tovQPK93jEDu2vI1"
+                    />
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/Manage" title="Manage">你好，ces!</a>
+                        </li>
+                        <li><a href="javascript:document.getElementById('logoutForm').submit()">注销</a></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+        <style type="text/css">
+            #btn_Browse:hover {
+                color: #3C763D;
+            }
+            
+            .msg {
+                color: red;
+            }
+        </style>
+
+        <h2>待外呼清单</h2>
+
+        <p class="msg">
+
+        </p>
+        <form action="/UploadExcel/Browse" enctype="multipart/form-data" id="form_Upload" method="post"><input name="__RequestVerificationToken" type="hidden" value="8Tquw67Z6aAvEYjqRsMIchhY5sGO6jc58XA2hdJ1jstgFKH_eWSMgGvoVZQKpH5pC4GkH1BV3__EmGTbJA8Le7FvmAZaMxH6m4bfjWX_eGI1"
+            /> <input id="fileUpload" type="file" name="file" style="display:none">
+        </form>
+        <table id="dg" title="待外呼清单" class="easyui-datagrid" style="width:100%;height:100%" url="{" total ":4,"rows ":[{"商户名 ":"7
+            ","法人 ":" ","身份证 ":"wer ","注册地址 ":" ","拓展渠道 ":" ","拓展人 ":" ","拓展地区 ":" ","联系人 ":" ","联系电话 ":" ","月均交易 ":" ","是否接通
+            ":" ","是否有意向 ":" ","备注 ":" ","外呼人员 ":" ","外呼日期 ":" "},{"商户名 ":"8 ","法人 ":" ","身份证 ":"rrwe ","注册地址 ":" ","拓展渠道 ":"
+            ","拓展人 ":" ","拓展地区 ":" ","联系人 ":" ","联系电话 ":" ","月均交易 ":" ","是否接通 ":" ","是否有意向 ":" ","备注 ":" ","外呼人员 ":" ","外呼日期
+            ":" "},{"商户名 ":"9 ","法人 ":" ","身份证 ":"43 ","注册地址 ":" ","拓展渠道 ":" ","拓展人 ":" ","拓展地区 ":" ","联系人 ":" ","联系电话 ":" ","月均交易
+            ":" ","是否接通 ":" ","是否有意向 ":" ","备注 ":" ","外呼人员 ":" ","外呼日期 ":" "},{"商户名 ":"43 ","法人 ":" ","身份证 ":"rewr ","注册地址 ":"
+            ","拓展渠道 ":" ","拓展人 ":" ","拓展地区 ":" ","联系人 ":" ","联系电话 ":" ","月均交易 ":" ","是否接通 ":" ","是否有意向 ":" ","备注 ":" ","外呼人员
+            ":" ","外呼日期 ":" "}]}" toolbar="#toolbar" pagination="true" rownumbers="true" fitColumns="true" singleSelect="true">
+            <thead>
+                <tr>
+
+                    <th field="商户名">商户名</th>
+                    <th field="法人">法人</th>
+                    <th field="身份证">身份证</th>
+                    <th field="注册地址">注册地址</th>
+                    <th field="拓展渠道">拓展渠道</th>
+                    <th field="拓展人">拓展人</th>
+                    <th field="拓展地区">拓展地区</th>
+                    <th field="联系人">联系人</th>
+                    <th field="联系电话">联系电话</th>
+                    <th field="月均交易">月均交易</th>
+                    <th field="是否接通">是否接通</th>
+                    <th field="是否有意向">是否有意向</th>
+                    <th field="备注">备注</th>
+                    <th field="外呼人员">外呼人员</th>
+                    <th field="外呼日期">外呼日期</th>
+                </tr>
+
+
+            </thead>
+            </table>
+
+            <div id="toolbar">
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">登记</a>
+            </div>
+
+
+            <div id="dlg" class="easyui-dialog" style="width:400px" closed="true" buttons="#dlg-buttons">
+                <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px">
+                    <div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">登记外呼情况</div>
+                    <div style="margin-bottom:10px">
+                        <input name="是否接通" class="easyui-textbox" required="true" label="是否接通:" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input name="是否有意向" class="easyui-textbox" required="true" label="是否有意向:" style="width:100%">
+                    </div>
+                    <div style="margin-bottom:10px">
+                        <input name="备注" class="easyui-textbox" required="true" label="备注:" style="width:100%">
+                    </div>
+                </form>
+            </div>
+            <div id="dlg-buttons">
+                <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">保存</a>
+                <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')"
+                    style="width:90px">取消</a>
+            </div>
+
+
+
+
+            <script type="text/javascript">
+                                                                                                      var url;
+                                                                                                      function newUser() {
+                                                                                                          $('#dlg').dialog('open').dialog('center').dialog('setTitle', 'New User');
+                                                                                                          $('#fm').form('clear');
+                                                                                                          url = 'save_user.php';
+                                                                                                      }
+                                                                                                      function editUser() {
+                                                                                                          var row = $('#dg').datagrid('getSelected');
+                                                                                                          if (row) {
+                                                                                                              $('#dlg').dialog('open').dialog('center').dialog('setTitle', 'Edit User');
+                                                                                                              $('#fm').form('load', row);
+                                                                                                              url = 'update_user.php?id=' + row.id;
+                                                                                                          }
+                                                                                                      }
+                                                                                                      function saveUser() {
+                                                                                                          $('#fm').form('submit', {
+                                                                                                              url: url,
+                                                                                                              onSubmit: function () {
+                                                                                                                  return $(this).form('validate');
+                                                                                                              },
+                                                                                                              success: function (result) {
+                                                                                                                  var result = eval('(' + result + ')');
+                                                                                                                  if (result.errorMsg) {
+                                                                                                                      $.messager.show({
+                                                                                                                          title: 'Error',
+                                                                                                                          msg: result.errorMsg
+                                                                                                                      });
+                                                                                                                  } else {
+                                                                                                                      $('#dlg').dialog('close');        // close the dialog
+                                                                                                                      $('#dg').datagrid('reload');    // reload the user data
+                                                                                                                  }
+                                                                                                              }
+                                                                                                          });
+                                                                                                      }
+                                                                                                      function destroyUser() {
+                                                                                                          var row = $('#dg').datagrid('getSelected');
+                                                                                                          if (row) {
+                                                                                                              $.messager.confirm('Confirm', 'Are you sure you want to destroy this user?', function (r) {
+                                                                                                                  if (r) {
+                                                                                                                      $.post('destroy_user.php', { id: row.id }, function (result) {
+                                                                                                                          if (result.success) {
+                                                                                                                              $('#dg').datagrid('reload');    // reload the user data
+                                                                                                                          } else {
+                                                                                                                              $.messager.show({    // show error message
+                                                                                                                                  title: 'Error',
+                                                                                                                                  msg: result.errorMsg
+                                                                                                                              });
+                                                                                                                          }
+                                                                                                                      }, 'json');
+                                                                                                                  }
+                                                                                                              });
+                                                                                                          }
+                                                                                                      }
+            </script>
+
+
+            <hr />
+            <footer>
+                <p>&copy; 2017 - 银联商务有限公司福建分公司</p>
+            </footer>
+    </div>
+
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/respond.js"></script>
+    <script src="/Scripts/jquery.easyui.min.js"></script>
+    <script src="/Scripts/easyui-lang-zh_CN.js"></script>
+
+
+    <script type="text/javascript">
+                                                                                                      $('input[id=fileUpload]').change(function () {
+                                                                                                          $('#form_Upload').submit();
+                                                                                                      });
+    </script>
+</body>
+
+</html>
